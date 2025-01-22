@@ -3,9 +3,11 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
+import { TextShimmerWave } from '@/components/ui/text-shimmer-wave';
 
 import Button from "./Button";
 import VideoPreview from "./VideoPreview";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -146,11 +148,22 @@ const Hero = () => {
 
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-24 px-5 sm:px-10">
-                        <h1 className="special-font hero-heading text-blue-100">
-                            Cy<b>b</b>er
+                      
+
+                        <h1 className="special-font hero-heading ">
+                        <TextShimmerWave   
+                            className='[--base-color:#0D74CE] [--base-gradient-color:#5EB1EF]'
+                            duration={1}
+                            spread={1}
+                            zDistance={2}
+                            scaleDistance={1.4}
+                            rotateYDistance={20}>
+                            Cyber
+                           
+                        </TextShimmerWave>
                         </h1>
 
-                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
+                        <p className="mb-5 max-w-64 font-robert-regular text-blue-300">
                            I am Kostadin Draganov <br /> Seneor Software Engineer
                         </p>
 

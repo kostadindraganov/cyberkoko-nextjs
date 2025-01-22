@@ -27,6 +27,7 @@ const NavBar = () => {
     setIsIndicatorActive((prev) => !prev);
   };
 
+
   // Manage audio playback
   useEffect(() => {
     if (isAudioPlaying) {
@@ -38,11 +39,11 @@ const NavBar = () => {
 
   useEffect(() => {
     if (currentScrollY === 0) {
-      
+ 
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
-      
+  
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
