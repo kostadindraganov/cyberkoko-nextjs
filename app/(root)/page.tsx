@@ -1,21 +1,20 @@
 "use client"
 
-import './App.css'
-import About from './components/About'
-import Contact from './components/Contact'
-import Features from './components/Features'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import NavBar from './components/Navbar'
-import FloatingImage from './components/Story'
+import About from '@/components/About'
+import Contact from '@/components/Contact'
+import Features from '@/components/Features'
+import Footer from '@/components/Footer'
+import Hero from '@/components/Hero'
+import NavBar from '@/components/Navbar'
+import FloatingImage from '@/components/Story'
 import { useLayoutEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import Universe from './components/Universe'
-import WhoAreWe from './components/WhoAreWe'
-import Glance from './components/Glance'
-import Labels from './components/Labels'
-import Updates from './components/Updates'
-import Intro from './components/Intro'
+import Universe from '@/components/Universe'
+import WhoAreWe from '@/components/WhoAreWe'
+import Glance from '@/components/Glance'
+import Labels from '@/components/Labels'
+import Updates from '@/components/Updates'
+import Intro from '@/components/Intro'
 
 function App() {
   const comp = useRef(null);

@@ -3,10 +3,11 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import Link from "next/link";
+import Image from "next/image";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
 
 const NavBar = () => {
   
@@ -72,7 +73,9 @@ const NavBar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           
           <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
+          <Link href="/">
+            <Image src="/img/logo.png" alt="logo" width={64} height={20} />
+          </Link>
 
             <Button
               id="product-button"
@@ -84,16 +87,16 @@ const NavBar = () => {
 
           
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
-              {navItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
-                >
-                  {item}
-                </a>
-              ))}
+            <div className=" md:block">
+               <Link href="/">
+                <button className="nav-hover-btn">Home</button>
+              </Link>
+              <Link href="/portfolio">
+                <button className="nav-hover-btn">Portfolio</button>
+              </Link>
+              <Link href="/blog">
+                <button className="nav-hover-btn">Blog</button>
+              </Link>
             </div>
 
             <button
