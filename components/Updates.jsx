@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useRef } from 'react';
 import Button from './Button';
 import { SiSoundcharts } from 'react-icons/si';
